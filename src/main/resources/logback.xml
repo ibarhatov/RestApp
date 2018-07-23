@@ -1,0 +1,33 @@
+<configuration>
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    <appender name="rest" class="ch.qos.logback.core.FileAppender">
+        <file>logs/restLog.log</file>
+        <encoder>
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    <appender name="services" class="ch.qos.logback.core.FileAppender">
+        <file>logs/serviceLog.log</file>
+        <encoder>
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="console"/>
+    </root>
+
+    <logger name="ru.ibarhatov.restapp.logging.ControllerLogger" level="info">
+        <appender-ref ref="rest"/>
+    </logger>
+
+    <logger name="ru.ibarhatov.restapp.logging.ControllerLogger" level="info">
+        <appender-ref ref="services"/>
+    </logger>
+</configuration>

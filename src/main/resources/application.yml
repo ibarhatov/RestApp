@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: dev
+  jpa:
+    properties.hibernate.temp.use_jdbc_metadata_defaults: false
+    hibernate.ddl-auto: update
+    open-in-view: false
+  security:
+    user:
+      name: user
+      password: user
+      roles: user

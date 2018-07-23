@@ -1,0 +1,18 @@
+{
+  "roleCode": "ADMIN",
+  "Name": "Открытие первого счета"
+}
+/*
+{
+  "roleCode" : "GUEST",
+  "Name" : "Гость"
+}
+{
+  "roleCode" : "MANAGER",
+  "Name" : "Менеджер"
+}
+{
+  "roleCode" : "SUPERVISOR",
+  "Name" : "Руководитель"
+}
+*/
