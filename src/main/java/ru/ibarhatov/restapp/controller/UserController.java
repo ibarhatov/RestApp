@@ -6,7 +6,7 @@ import ru.ibarhatov.restapp.model.User;
 import ru.ibarhatov.restapp.services.UserService;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/users")
 public class UserController {
 
     @Autowired

@@ -7,7 +7,7 @@ import ru.ibarhatov.restapp.model.Role;
 import ru.ibarhatov.restapp.services.RoleService;
 
 @RestController
-@RequestMapping("/role")
+@RequestMapping("/roles")
 public class RoleController {
 
     @Autowired
