@@ -9,33 +9,28 @@ import ru.ibarhatov.restapp.services.UserService;
 @RequestMapping("/user")
 public class UserController {
 
-    private final String createCommand = "/create";
-    private final String findCommand = "/find";
-    private final String updateCommand = "/update";
-    private final String deleteCommand = "/delete";
-
     @Autowired
     UserService userService;
 
-    @PutMapping(createCommand)
+    @PostMapping
     public Integer createUser(@RequestBody User user) {
         Integer id = userService.create(user);
         return id;
     }
 
-    @GetMapping(findCommand)
+    @GetMapping
     public String findUser(@RequestParam(name = "code") String login) {
         User result = userService.findOne(login);
         return result != null ? result.getName() : "Not found.";
     }
 
-    @PostMapping(updateCommand)
+    @PutMapping
     public Integer updateUser(@RequestBody User user) {
         Integer result = userService.update(user);
         return result;
     }
 
-    @DeleteMapping(deleteCommand)
+    @DeleteMapping
     public void deleteUser(@RequestParam(name = "id") Integer id) {
         userService.delete(id);
     }
